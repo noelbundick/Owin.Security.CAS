@@ -18,7 +18,7 @@ using Xunit;
 
 namespace Owin.Cas.Tests
 {
-    public class CasMiddlewareTests
+    public class CasMiddlewareFacts
     {
         private const string CookieAuthenticationType = "Cookie";
 

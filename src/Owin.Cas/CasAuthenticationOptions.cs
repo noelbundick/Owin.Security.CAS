@@ -21,7 +21,7 @@ namespace Owin.Cas
             CallbackPath = new PathString("/signin-cas");
             AuthenticationMode = AuthenticationMode.Passive;
             BackchannelTimeout = TimeSpan.FromSeconds(60);
-            TicketValidator = new Cas2ServiceValidateTicketValidator();
+            TicketValidator = new Cas2ServiceValidateTicketValidator(this);
             NameClaimType = ClaimTypes.Name;
         }
 

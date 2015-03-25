@@ -58,7 +58,7 @@ namespace Owin.Cas
 
                 var validator = Options.TicketValidator;
                 var service = Uri.EscapeDataString(BuildReturnTo(GetStateParameter(query)));
-                return await validator.ValidateTicket(Options, Request, Context, _httpClient, ticket, properties, service);
+                return await validator.ValidateTicket(Request, Context, _httpClient, ticket, properties, service);
             }
             catch (Exception ex)
             {

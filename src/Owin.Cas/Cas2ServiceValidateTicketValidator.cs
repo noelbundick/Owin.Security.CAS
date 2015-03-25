@@ -11,13 +11,19 @@ namespace Owin.Cas
 {
     public class Cas2ServiceValidateTicketValidator : ICasTicketValidator
     {
+        private readonly CasAuthenticationOptions _options;
         private readonly XNamespace _ns = "http://www.yale.edu/tp/cas";
 
-        public async Task<AuthenticationTicket> ValidateTicket(CasAuthenticationOptions options, IOwinRequest request, IOwinContext context, HttpClient httpClient,
+        public Cas2ServiceValidateTicketValidator(CasAuthenticationOptions options)
+        {
+            _options = options;
+        }
+
+        public async Task<AuthenticationTicket> ValidateTicket(IOwinRequest request, IOwinContext context, HttpClient httpClient,
             string ticket, AuthenticationProperties properties, string service)
         {
             // Now, we need to get the ticket validated
-            string validateUrl = options.CasServerUrlBase + "/serviceValidate" +
+            string validateUrl = _options.CasServerUrlBase + "/serviceValidate" +
                                  "?service=" + service +
                                  "&ticket=" + Uri.EscapeDataString(ticket);
 
@@ -38,11 +44,11 @@ namespace Owin.Cas
 
                 if (!string.IsNullOrEmpty(validatedUserName))
                 {
-                    var identity = BuildIdentity(options, validatedUserName, successNode);
+                    var identity = BuildIdentity(_options, validatedUserName, successNode);
 
                     var authenticatedContext = new CasAuthenticatedContext(context, identity, properties);
 
-                    await options.Provider.Authenticated(authenticatedContext);
+                    await _options.Provider.Authenticated(authenticatedContext);
 
                     return new AuthenticationTicket(authenticatedContext.Identity, authenticatedContext.Properties);
                 }
