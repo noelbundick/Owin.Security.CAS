@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <title>$title$</title>
+    <description>Contains middlewares to support CAS authentication workflows.</description>
+    <tags>OWIN CAS</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" />
+      <frameworkAssembly assemblyName="System.Net.Http.WebRequest" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Owin" version="1.0" />
+      <dependency id="Microsoft.Owin" version="2.1.0" />
+      <dependency id="Microsoft.Owin.Security" version="2.1.0" />
+    </dependencies>
+  </metadata>
+</package>
