@@ -41,6 +41,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cas1ValidateTicketValidator.cs" />
+    <Compile Include="Cas2ServiceValidateTicketValidator.cs" />
+    <Compile Include="CasApplyRedirectContext.cs" />
+    <Compile Include="CasAuthenticatedContext.cs" />
+    <Compile Include="CasAuthenticationExtensions.cs" />
+    <Compile Include="CasAuthenticationHandler.cs" />
+    <Compile Include="CasAuthenticationMiddleware.cs" />
+    <Compile Include="CasAuthenticationOptions.cs" />
+    <Compile Include="CasAuthenticationProvider.cs" />
+    <Compile Include="CasReturnEndpointContext.cs" />
+    <Compile Include="ICasAuthenticationProvider.cs" />
+    <Compile Include="ICasTicketValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
