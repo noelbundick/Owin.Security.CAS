@@ -1,7 +1,7 @@
 language: csharp
 solution: ./src/Owin.Security.CAS.sln
 install:
-  - nuget restore solution-name.sln
+  - nuget restore ./src/Owin.Security.CAS.sln
   - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release solution-name.sln
