@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Owin.Security;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     /// <summary>
     /// Default <see cref="ICasAuthenticationProvider"/> implementation.

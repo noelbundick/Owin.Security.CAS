@@ -7,7 +7,7 @@
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>$title$</title>
-    <description>Contains middlewares to support CAS authentication workflows.</description>
+    <description>OWIN middleware to support Jasig CAS</description>
     <tags>OWIN CAS</tags>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System.Net.Http" />

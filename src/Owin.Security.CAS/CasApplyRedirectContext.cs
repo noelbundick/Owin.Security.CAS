@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     /// <summary>
     /// Context passed when a Challenge causes a redirect to authorize endpoint in the Cas middleware

@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Owin.Cas")]
-[assembly: AssemblyDescription("CAS authentication handler for OWIN")]
+[assembly: AssemblyTitle("Owin.Security.CAS")]
+[assembly: AssemblyDescription("OWIN middleware to support Jasig CAS")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Noel Bundick")]
-[assembly: AssemblyProduct("Owin.Cas")]
+[assembly: AssemblyProduct("Owin.Security.CAS")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

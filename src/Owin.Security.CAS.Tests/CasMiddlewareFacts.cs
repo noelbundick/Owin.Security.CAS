@@ -16,7 +16,7 @@ using Microsoft.Owin.Testing;
 using Shouldly;
 using Xunit;
 
-namespace Owin.Cas.Tests
+namespace Owin.Security.CAS.Tests
 {
     public class CasMiddlewareFacts
     {

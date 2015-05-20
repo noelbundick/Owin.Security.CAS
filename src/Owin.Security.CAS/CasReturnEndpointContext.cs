@@ -2,7 +2,7 @@
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Provider;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     /// <summary>
     /// Provides context information to middleware providers.

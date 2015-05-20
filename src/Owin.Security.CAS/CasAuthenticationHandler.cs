@@ -10,7 +10,7 @@ using Microsoft.Owin.Logging;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     internal class CasAuthenticationHandler : AuthenticationHandler<CasAuthenticationOptions>
     {

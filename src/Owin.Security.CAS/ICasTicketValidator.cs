@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     public interface ICasTicketValidator
     {

@@ -79,7 +79,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Owin.Cas\Owin.Cas.csproj">
+    <ProjectReference Include="..\Owin.Security.CAS\Owin.Security.CAS.csproj">
       <Project>{4f350bad-7681-4282-bc49-8b3f08290543}</Project>
       <Name>Owin.Cas</Name>
     </ProjectReference>

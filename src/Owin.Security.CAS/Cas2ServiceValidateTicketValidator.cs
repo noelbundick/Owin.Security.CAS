@@ -7,7 +7,7 @@ using System.Xml.Linq;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     public class Cas2ServiceValidateTicketValidator : ICasTicketValidator
     {

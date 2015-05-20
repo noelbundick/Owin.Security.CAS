@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     public static class CasAuthenticationExtensions
     {

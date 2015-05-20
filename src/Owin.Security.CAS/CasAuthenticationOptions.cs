@@ -4,7 +4,7 @@ using System.Security.Claims;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace Owin.Cas
+namespace Owin.Security.CAS
 {
     /// <summary>
     /// Configuration options for <see cref="CasAuthenticationMiddleware"/>
