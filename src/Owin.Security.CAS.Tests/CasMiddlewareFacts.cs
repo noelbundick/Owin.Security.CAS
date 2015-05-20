@@ -12,8 +12,6 @@ using System.Xml.Linq;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.DataHandler;
-using Microsoft.Owin.Security.DataHandler.Serializer;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Testing;
 using Shouldly;
@@ -34,9 +32,10 @@ namespace Owin.Security.CAS.Tests
             });
             var transaction = await SendAsync(server, "https://example.com/challenge");
             transaction.Response.StatusCode.ShouldBe(HttpStatusCode.Redirect);
-            var location = transaction.Response.Headers.Location.ToString();
-            location.ShouldContain("https://cas-dev.tamu.edu/cas/login?service=https://example.com/signin-cas");
-            location.ShouldContain("?state=");
+            var location = transaction.Response.Headers.Location;
+
+            var expectedReturnUrl = Uri.EscapeDataString("https://example.com/signin-cas?state=");
+            location.AbsoluteUri.ShouldContain("https://cas-dev.tamu.edu/cas/login?service=" + expectedReturnUrl);
         }
 
         [Fact]

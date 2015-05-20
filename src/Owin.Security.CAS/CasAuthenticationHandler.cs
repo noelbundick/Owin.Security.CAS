@@ -90,7 +90,6 @@ namespace Owin.Security.CAS
                 "?state=" + Uri.EscapeDataString(state);
         }
 
-        [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times", Justification = "MemoryStream.Dispose is idempotent")]
         protected override Task ApplyResponseChallengeAsync()
         {
             if (Response.StatusCode != 401)
