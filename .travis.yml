@@ -6,3 +6,5 @@ install:
 script:
   - xbuild /p:Configuration=Release ./src/Owin.Security.CAS.sln
   - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./src/Owin.Security.CAS.Tests/bin/Release/Owin.Security.CAS.Tests.dll
+after_success:
+  - nuget pack ./src/Owin.Security.CAS/Owin.Security.CAS.csproj -Prop Configuration=Release
