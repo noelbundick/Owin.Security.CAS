@@ -12,6 +12,9 @@ using System.Xml.Linq;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.DataHandler;
+using Microsoft.Owin.Security.DataHandler.Serializer;
+using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Testing;
 using Shouldly;
 using Xunit;
@@ -143,9 +146,10 @@ namespace Owin.Security.CAS.Tests
             return TestServer.Create(app =>
             {
                 app.Properties["host.AppName"] = "Microsoft.Owin.Security.Tests";
+                app.SetDataProtectionProvider(new DummyDataProtectorProvider());
                 app.UseCookieAuthentication(new CookieAuthenticationOptions
                 {
-                    AuthenticationType = CookieAuthenticationType
+                    AuthenticationType = CookieAuthenticationType,
                 });
                 options.SignInAsAuthenticationType = CookieAuthenticationType;
                 app.UseCasAuthentication(options);
