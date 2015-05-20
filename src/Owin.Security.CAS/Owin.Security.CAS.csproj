@@ -7,8 +7,8 @@
     <ProjectGuid>{4F350BAD-7681-4282-BC49-8B3F08290543}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Owin.Cas</RootNamespace>
-    <AssemblyName>Owin.Cas</AssemblyName>
+    <RootNamespace>Owin.Security.CAS</RootNamespace>
+    <AssemblyName>Owin.Security.CAS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

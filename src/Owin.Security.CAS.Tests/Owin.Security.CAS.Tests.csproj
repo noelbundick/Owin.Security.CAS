@@ -7,8 +7,8 @@
     <ProjectGuid>{328186C8-2AD2-42FA-BB8D-AEA4FFC67C3A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Owin.Cas.Tests</RootNamespace>
-    <AssemblyName>Owin.Cas.Tests</AssemblyName>
+    <RootNamespace>Owin.Security.CAS.Tests</RootNamespace>
+    <AssemblyName>Owin.Security.CAS.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>ce8b745d</NuGetPackageImportStamp>
@@ -81,7 +81,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Owin.Security.CAS\Owin.Security.CAS.csproj">
       <Project>{4f350bad-7681-4282-bc49-8b3f08290543}</Project>
-      <Name>Owin.Cas</Name>
+      <Name>Owin.Security.CAS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
