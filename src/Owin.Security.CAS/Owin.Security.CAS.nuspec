@@ -5,6 +5,8 @@
     <version>$version$</version>
     <authors>$author$</authors>
     <owners>$author$</owners>
+    <projectUrl>https://github.com/noelbundick/Owin.Security.CAS</projectUrl>
+    <licenseUrl>https://github.com/noelbundick/Owin.Security.CAS/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <title>$title$</title>
     <description>OWIN middleware to support Jasig CAS</description>
