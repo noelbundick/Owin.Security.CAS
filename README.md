@@ -28,6 +28,21 @@ Using zip file
 ## Properties
 ## Methods
 ## Examples
+### Adding Texas A&M CAS (called NetID) to an ASP.NET MVC Web Application
+This example is based on the default **ASP.NET Web Application - MVC** template, using **Individual User Accounts** Authentication.
+
+Open **App_Start/Startu.Auth.cs** and make the following modifications
+* Add `using Owin.Security.CAS;`
+* Add the following code below the `// Uncomment the following lines to enable logging in with third party login providers` section 
+```c#
+CasAuthenticationOptions casOptions = new CasAuthenticationOptions()
+{
+    AuthenticationType = "Net ID", // change "CAS" to "Net ID" on the button and in DB
+    Caption = "Net ID", // change "CAS" to "Net ID" in tool tip
+    CasServerUrlBase = "https://cas-dev.tamu.edu/cas"
+};
+app.UseCasAuthentication(casOptions);
+```
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/noelbundick/Owin.Security.CAS/blob/master/LICENSE.md)
 [![Build Status](https://www.myget.org/BuildSource/Badge/owin-security-cas?identifier=f61417a1-8dfe-49f2-9981-b9d44c5b234e)](https://www.myget.org/)
