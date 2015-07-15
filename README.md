@@ -46,7 +46,7 @@ Using zip file
   4. Select **OK**
   5. You should now see **Owin.Security.CAS** under **References**
 
-## Enabling CAS Athentication
+## Enabling CAS Authentication
 CAS authentication is enabled by calling `app.UseCasAuthentication();` in the `ConfigureAuth()` method in **App_Start/Startup.Auth.cs**.  `UseCasAuthentication()` takes a `CasAuthenticationOptions` object that contains configuration options needed for connecting to your CAS server.  At a minmum, the `CasAuthenticationOptions` object needs to have the `CasServerUrlBase` property set to the URL to your CAS server.
 
 See the **Examples** section for some sample imlementations
