@@ -1,6 +1,27 @@
 # Owin.Security.CAS
 Owin.Security.CAS is an [OWIN](http://owin.org) authentication provider for [CAS](https://github.com/Jasig/cas)
 
+## Quick Start
+Too much on your plate to read through documentation?  Need to get CAS authentication added to your MVC solution now?  Here's what you need to do.
+
+1. Install the NuGet package
+
+    `PM> install-package Owin.Security.CAS`
+
+2. Open **App_Start/Startup.Auth.cs**
+3. Add `using Owin.Security.CAS;` to the end of the `using` statements
+4. Paste the following code below the `// Uncomment the following lines to enable logging in with third party login providers` line
+
+    ```c#
+    CasAuthenticationOptions casOptions = new CasAuthenticationOptions()
+    {
+        CasServerUrlBase = "https://your.cas.server.com/cas"
+    };
+    app.UseCasAuthentication(casOptions);
+    ```
+
+5. DONE!
+
 ## Installing
 Using NuGet
 
@@ -25,8 +46,34 @@ Using zip file
   4. Select **OK**
   5. You should now see **Owin.Security.CAS** under **References**
 
-## Properties
-## Methods
+## Enabling CAS Athentication
+CAS authentication is enabled by calling `app.UseCasAuthentication();` in the `ConfigureAuth()` method in **App_Start/Startup.Auth.cs**.  `UseCasAuthentication()` takes a `CasAuthenticationOptions` object that contains configuration options needed for connecting to your CAS server.  At a minmum, the `CasAuthenticationOptions` object needs to have the `CasServerUrlBase` property set to the URL to your CAS server.
+
+See the **Examples** section for some sample imlementations
+
+## CasAuthenticationOptions
+### Properties
+* `AuthenticationMode`
+* `AuthenticationType` - String that appears in the button, and that is used for **dbo.AspNetUserLogins.LoginProvider** in the DB.  Default: `CAS`
+* `BackchannelHttpHandler`
+* `BackchannelTimeout`
+* `CallbackPath`
+* `Caption` - String that will replace "CAS" in the tool tip of the button. Default: `CAS`
+* `CasServerUrlBase` - String containing the URL to your CAS server
+* `Description`
+* `NameClaimType`
+* `NameIdentifierAttribute`
+* `Provider`
+* `SignInAsAuthenticationType`
+* `StateDataFormat`
+* `TicketValidator`
+
+### Methods
+* `Equals()`
+* `GetHashCode()`
+* `GetType()`
+* `ToString()`
+
 ## Examples
 ### Adding Texas A&M CAS (called NetID) to an ASP.NET MVC Web Application
 This example is based on the default **ASP.NET Web Application - MVC** template, using **Individual User Accounts** Authentication.
