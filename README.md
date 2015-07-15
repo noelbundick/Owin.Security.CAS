@@ -23,7 +23,7 @@ Too much on your plate to read through documentation?  Need to get CAS authentic
 5. DONE!
 
 ## Installing
-Using NuGet
+Using NuGet [![NuGet Status](http://nugetstatus.com/Owin.Security.CAS.png)](http://nugetstatus.com/packages/Owin.Security.CAS)
 
     PM> install-package Owin.Security.CAS
 
